@@ -12,8 +12,8 @@ public class Role extends BaseEntity {
 
     @NotBlank
     @Unique
-    private String roleName;
-    private String aliasName;
+    private String roleName;    // 角色名称
+    private String aliasName;   // 角色别名
     @DBRef
     private List<Authority> authorities;
 

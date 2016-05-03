@@ -36,6 +36,7 @@ public class LoginController {
         Object object = subject.getPrincipal();
         if (object == null) {
             model.addAttribute(FormAuthenticationCaptchaFilter.DEFAULT_USERNAME_PARAM, userName);
+            model.addAttribute("msg", "用户名或密码错误！");
             return "login";
         }
         return "redirect:/";
