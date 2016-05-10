@@ -23,7 +23,7 @@
 <body>
 	<header class="am-topbar">
 		<h1 class="am-topbar-brand">
-			<a href="/">blog</a>
+			<a href="/">JOY</a>
 		</h1>
 
 		<button
@@ -34,11 +34,12 @@
 
 		<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
 			<ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right">
-				<li class="am-dropdown" data-am-dropdown><a
-					class="am-dropdown-toggle" data-am-dropdown-toggle
-					href="javascript:;"> <shiro:principal /> <span
-						class="am-icon-caret-down"></span>
-				</a>
+				<li class="am-dropdown" data-am-dropdown>
+					<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+						<span class="am-icon-user"></span>
+						<shiro:principal />
+						<span class="am-icon-caret-down"></span>
+					</a>
 					<ul class="am-dropdown-content">
 						<li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
 						<li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>

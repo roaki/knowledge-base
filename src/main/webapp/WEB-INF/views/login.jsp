@@ -13,7 +13,7 @@
 <meta name="renderer" content="webkit" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<title>登录 | 博客管理系统</title>
+<title>登录 | JOY 管理系统</title>
 
 <link rel="alternate icon" type="image/png" href="${ctx}/assets/i/favicon.png">
 <link rel="stylesheet" href="${ctx}/assets/css/amazeui.min.css" />
@@ -57,7 +57,7 @@
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
 				<div align="center">
-					<h2 class="page-header">博客管理系统</h2>
+					<h2 class="page-header">JOY 管理系统</h2>
 				</div>
 				<div class="login-panel panel panel-success">
 					<div class="panel-heading">

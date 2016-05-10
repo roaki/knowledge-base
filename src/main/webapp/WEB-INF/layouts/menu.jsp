@@ -13,7 +13,7 @@
       <tags:hasAnyPermissions name="user:list,role:list,authority:list">
         <li>
           <a class="am-cf" data-am-collapse="{target: '#collapse-nav-user'}">
-            <span class="am-icon-file"></span> 用户模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+            <span class="am-icon-file"></span> 用户管理<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
           <ul class="am-list am-collapse admin-sidebar-sub ${menu=='user'?'am-in':''}" id="collapse-nav-user">
             <shiro:hasPermission name="user:list">
               <li class="${subMenu=='user'?'am-active':''}"><a href="${ctx}/user/" class="am-cf"><span
@@ -55,7 +55,7 @@
       </shiro:hasPermission>
       <li><a href="${ctx}/logout"><span class="am-icon-sign-out"></span> 退出</a></li>
     </ul>
-    
+
 
     <div class="am-panel am-panel-default admin-sidebar-panel">
       <div class="am-panel-bd">
