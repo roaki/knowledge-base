@@ -6,7 +6,7 @@
 <meta name="menu" content="category" />
 
 <div class="am-cf am-padding">
-  <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">分类目录</strong> /
+  <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">分类</strong> /
     <small>列表</small>
   </div>
 </div>
@@ -34,9 +34,10 @@
         <thead>
         <tr>
           <th class="table-check"><input type="checkbox"/></th>
-          <th class="table-id">id</th>
-          <th class="table-title">目录名称</th>
+          <th class="table-id">序号</th>
+          <th class="table-title">分类名称</th>
           <th class="table-author am-hide-sm-only">创建日期</th>
+          <th class="table-author am-hide-sm-only">修改日期</th>
           <th class="table-set">操作</th>
         </tr>
         </thead>
@@ -46,18 +47,20 @@
             <td><input type="checkbox"/></td>
             <td>${status.index + 1}</td>
             <td>${category.title}</td>
-            <td class="am-hide-sm-only"><fmt:formatDate value="${category.creationTime}"
-                                                        pattern="yyyy-MM-dd HH:mm:ss"/></td>
+            <td class="am-hide-sm-only">
+              <fmt:formatDate value="${category.creationTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+            <td class="am-hide-sm-only">
+              <fmt:formatDate value="${category.modifiedTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
             <td>
               <div class="am-btn-toolbar">
                 <div class="am-btn-group am-btn-group-xs">
-                  <button class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/category/edit/${category.id}"><span
+                  <a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/category/edit/${category.id}"><span
                           class="am-icon-pencil-square-o"></span> 编辑
-                  </button>
-                  <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
+                  </a>
+                  <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
                      data-href="${ctx}/category/delete/${category.id}" href="javascript:void(0);"><span
                           class="am-icon-trash-o"></span> 删除
-                  </button>
+                  </a>
                 </div>
               </div>
             </td>

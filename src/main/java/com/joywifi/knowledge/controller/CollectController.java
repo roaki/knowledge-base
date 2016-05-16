@@ -10,9 +10,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springside.modules.persistence.SearchFilter;
 import org.springside.modules.web.Servlets;
 
@@ -62,12 +64,14 @@ public class CollectController {
 		return "success";
 	}
 
-	@ResponseBody
-	@RequestMapping(value = "delete", method = RequestMethod.GET)
-	public String delete(String blogId) {
-		Map<String, SearchFilter> filters = blogService.baseFilter(blogId);
-		List<Collect> collects = collectService.findBy(filters);
-		collectService.delete(collects);
-		return "success";
+	@RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+	public String delete(@PathVariable("id") String blogId, RedirectAttributes redirectAttributes) {
+//		Map<String, SearchFilter> filters = blogService.baseFilter(blogId);
+//		List<Collect> collects = collectService.findBy(filters);
+//		collectService.delete(collects);
+
+		collectService.delete(blogId);
+		redirectAttributes.addFlashAttribute("msg", "删除成功!");
+		return "redirect:/collect/";
 	}
 }

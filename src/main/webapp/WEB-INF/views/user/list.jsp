@@ -45,7 +45,7 @@
         <thead>
         <tr>
           <th class="table-check"><input type="checkbox"/></th>
-          <th class="table-id">id</th>
+          <th class="table-id">序列</th>
           <th class="table-title">用户名</th>
           <th class="table-type">邮箱</th>
           <th class="table-type">状态</th>

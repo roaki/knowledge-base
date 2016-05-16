@@ -68,9 +68,13 @@
             <td>
               <div class="am-btn-toolbar">
                 <div class="am-btn-group am-btn-group-xs">
-                  <button class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/role/edit/${role.id}"><span
-                          class="am-icon-pencil-square-o"></span> 编辑
-                  </button>
+                  <a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/role/edit/${role.id}">
+                    <span class="am-icon-pencil-square-o"></span> 编辑
+                  </a>
+                  <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
+                     data-href="${ctx}/role/delete/${role.id}" href="javascript:void(0);">
+                    <span class="am-icon-trash-o"></span> 删除
+                  </a>
                 </div>
               </div>
             </td>

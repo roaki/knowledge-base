@@ -3,8 +3,8 @@
 <meta name="menu" content="category" />
 
 <div class="am-cf am-padding">
-  <div class="am-fl am-cf"><a href="${ctx}/category/"> <strong class="am-text-primary am-text-lg">目录</strong></a> /
-    <small>修改目录</small>
+  <div class="am-fl am-cf"><a href="${ctx}/category/"> <strong class="am-text-primary am-text-lg">分类</strong></a> /
+    <small>修改分类</small>
   </div>
 </div>
 

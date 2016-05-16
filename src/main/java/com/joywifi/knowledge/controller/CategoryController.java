@@ -1,10 +1,12 @@
 package com.joywifi.knowledge.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import com.joywifi.knowledge.entity.Collect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -58,7 +60,7 @@ public class CategoryController {
 
         categoryService.save(category);
 
-        redirectAttributes.addFlashAttribute("msg", "新增目录成功");
+        redirectAttributes.addFlashAttribute("msg", "新增分类成功");
         return "redirect:/category/";
     }
 
@@ -78,7 +80,18 @@ public class CategoryController {
 
         categoryService.updateCategory(id, category);
 
-        redirectAttributes.addFlashAttribute("msg", "更新目录成功");
+        redirectAttributes.addFlashAttribute("msg", "更新分类成功");
+        return "redirect:/category/";
+    }
+
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    public String delete(@PathVariable("id") String id, RedirectAttributes redirectAttributes) {
+//        Map<String, SearchFilter> filters = categoryService.baseFilter(id);
+//        List<Category> categories = categoryService.findBy(filters);
+//        categoryService.delete(categories);
+
+        categoryService.delete(id);
+        redirectAttributes.addFlashAttribute("msg", "删除成功!");
         return "redirect:/category/";
     }
 

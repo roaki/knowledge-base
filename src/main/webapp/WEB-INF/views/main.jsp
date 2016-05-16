@@ -55,6 +55,9 @@
                 <ul class="am-dropdown-content">
                     <li><a href="${ctx}/blog/">所有文章</a></li>
                     <li><a href="${ctx}/collect/">我的收藏</a></li>
+                    <shiro:hasPermission name="admin:manager">
+                        <li><a href="${ctx}/user/">后台管理</a></li>
+                    </shiro:hasPermission>
                 </ul>
             </li>
 

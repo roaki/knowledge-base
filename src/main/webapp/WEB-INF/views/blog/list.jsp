@@ -56,20 +56,20 @@
             <td><input type="checkbox"/></td>
             <td>${status.index + 1}</td>
             <td><a href="${ctx}/blog/${blog.id}">${blog.title}</a></td>
-            <td class="am-hide-sm-only"><fmt:formatDate value="${blog.creationTime}"
-                                                        pattern="yyyy-MM-dd HH:mm:ss"/></td>
-            <td class="am-hide-sm-only"><fmt:formatDate value="${blog.modifiedTime}"
-                                                        pattern="yyyy-MM-dd HH:mm:ss"/></td>
+            <td class="am-hide-sm-only">
+              <fmt:formatDate value="${blog.creationTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+            <td class="am-hide-sm-only">
+              <fmt:formatDate value="${blog.modifiedTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
             <td>
               <div class="am-btn-toolbar">
                 <div class="am-btn-group am-btn-group-xs">
-                  <button class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/blog/edit/${blog.id}"><span
+                  <a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/blog/edit/${blog.id}"><span
                           class="am-icon-pencil-square-o"></span> 编辑
-                  </button>
-                  <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
+                  </a>
+                  <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
                      data-href="${ctx}/blog/delete/${blog.id}" href="javascript:void(0);"><span
                           class="am-icon-trash-o"></span> 删除
-                  </button>
+                  </a>
                 </div>
               </div>
             </td>

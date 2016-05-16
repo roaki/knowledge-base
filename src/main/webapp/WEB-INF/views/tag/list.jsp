@@ -51,9 +51,10 @@
         <thead>
         <tr>
           <th class="table-check"><input type="checkbox"/></th>
-          <th class="table-id">id</th>
+          <th class="table-id">序号</th>
           <th class="table-title">标题</th>
           <th class="table-author am-hide-sm-only">创建日期</th>
+          <th class="table-author am-hide-sm-only">修改日期</th>
           <th class="table-set">操作</th>
         </tr>
         </thead>
@@ -63,18 +64,20 @@
             <td><input type="checkbox"/></td>
             <td>${status.index + 1}</td>
             <td>${tag.title}</td>
-            <td class="am-hide-sm-only"><fmt:formatDate value="${tag.creationTime}"
-                                                        pattern="yyyy-MM-dd HH:mm:ss"/></td>
+            <td class="am-hide-sm-only">
+              <fmt:formatDate value="${tag.creationTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+            <td class="am-hide-sm-only">
+              <fmt:formatDate value="${tag.modifiedTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
             <td>
               <div class="am-btn-toolbar">
                 <div class="am-btn-group am-btn-group-xs">
-                  <button class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/tag/edit/${tag.id}"><span
+                  <a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/tag/edit/${tag.id}"><span
                           class="am-icon-pencil-square-o"></span> 编辑
-                  </button>
-                  <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
+                  </a>
+                  <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
                      data-href="${ctx}/tag/delete/${tag.id}" href="javascript:void(0);"><span
                           class="am-icon-trash-o"></span> 删除
-                  </button>
+                  </a>
                 </div>
               </div>
             </td>

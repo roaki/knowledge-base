@@ -82,4 +82,15 @@ public class RoleController {
         redirectAttributes.addFlashAttribute("msg", "更新角色成功");
         return "redirect:/role/";
     }
+
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    public String delete(@PathVariable("id") String id,
+                         RedirectAttributes redirectAttributes, HttpServletRequest request) {
+
+        roleService.delete(id);
+
+        redirectAttributes.addFlashAttribute("msg", "删除角色成功");
+        redirectAttributes.addAllAttributes(Servlets.getParametersStartingWith(request, ""));
+        return "redirect:/role/";
+    }
 }

@@ -60,13 +60,10 @@
             <td>
               <div class="am-btn-toolbar">
                 <div class="am-btn-group am-btn-group-xs">
-                  <button class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/blog/edit/${blog.id}"><span
-                          class="am-icon-pencil-square-o"></span> 编辑
-                  </button>
-                  <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
-                     data-href="${ctx}/blog/delete/${blog.id}" href="javascript:void(0);"><span
+                  <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only delete-model"
+                     data-href="${ctx}/collect/delete/${collect.id}" href="javascript:void(0);"><span
                           class="am-icon-trash-o"></span> 删除
-                  </button>
+                  </a>
                 </div>
               </div>
             </td>

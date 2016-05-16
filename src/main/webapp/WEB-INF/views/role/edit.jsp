@@ -12,21 +12,21 @@
 
 <div class="am-g">
   <div class="am-u-sm-12 am-u-md-8">
-    <form class="am-form am-form-horizontal" action="${ctx}/server/update/${role.id}" method="post">
+    <form class="am-form am-form-horizontal" action="${ctx}/role/update/${role.id}" method="post">
 
       <div class="am-form-group">
-        <label for="server-loginName" class="am-u-sm-3 am-form-label">角色名</label>
+        <label for="role-roleName" class="am-u-sm-3 am-form-label">角色名</label>
 
         <div class="am-u-sm-9">
-          <input type="text" id="server-loginName" name="loginName" value="${role.roleName}" required />
+          <input type="text" id="role-roleName" name="roleName" value="${role.roleName}" required />
         </div>
       </div>
 
       <div class="am-form-group">
-        <label for="server-loginPwd" class="am-u-sm-3 am-form-label">角色别名</label>
+        <label for="role-aliasName" class="am-u-sm-3 am-form-label">角色别名</label>
 
         <div class="am-u-sm-9">
-          <input type="text" id="server-loginPwd" name="loginPwd" value="${role.aliasName}" required />
+          <input type="text" id="role-aliasName" name="aliasName" value="${role.aliasName}" required />
         </div>
       </div>
 

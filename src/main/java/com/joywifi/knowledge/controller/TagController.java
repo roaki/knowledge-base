@@ -75,4 +75,34 @@ public class TagController {
         }
         return tagTitles;
     }
+
+    @RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
+    public String edit(@PathVariable("id") String id, Model model) {
+        Tag tag= tagService.get(id);
+        model.addAttribute("tag", tag);
+
+        return "tag/edit";
+    }
+
+    @RequestMapping(value = "update/{id}", method = RequestMethod.POST)
+    public String update(@PathVariable("id") String id, Tag tag, BindingResult result,
+                         RedirectAttributes redirectAttributes) {
+        if (result.hasErrors()) {
+            return "tag/edit";
+        }
+
+        tagService.update(id, tag);
+
+        redirectAttributes.addFlashAttribute("msg", "更新成功");
+        return "redirect:/tag/";
+    }
+
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    public String delete(@PathVariable("id") String id, RedirectAttributes redirectAttributes) {
+
+        tagService.delete(id);
+
+        redirectAttributes.addFlashAttribute("msg", "删除成功");
+        return "redirect:/tag/";
+    }
 }

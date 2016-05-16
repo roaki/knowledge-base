@@ -68,9 +68,9 @@
             <td>
               <div class="am-btn-toolbar">
                 <div class="am-btn-group am-btn-group-xs">
-                  <button class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/authority/edit/${authority.id}"><span
+                  <a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="${ctx}/authority/edit/${authority.id}"><span
                           class="am-icon-pencil-square-o"></span> 编辑
-                  </button>
+                  </a>
                 </div>
               </div>
             </td>

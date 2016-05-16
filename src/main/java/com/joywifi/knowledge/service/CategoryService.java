@@ -1,7 +1,11 @@
 package com.joywifi.knowledge.service;
 
 import java.util.List;
+import java.util.Map;
 
+import com.google.common.collect.Maps;
+import com.joywifi.knowledge.security.ShiroDbRealm;
+import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springside.modules.persistence.SearchFilter;
@@ -29,5 +33,14 @@ public class CategoryService extends BaseService<Category, String> {
             blogService.save(blog);
         }
 
+    }
+
+    public Map<String, SearchFilter> baseFilter(String categotyId) {
+        Map<String, SearchFilter> filters = Maps.newHashMap();
+        ShiroDbRealm.ShiroUser shiroUser = (ShiroDbRealm.ShiroUser) SecurityUtils.getSubject().getPrincipal();
+        System.out.println("当前用户：" + shiroUser.getUsername());
+        filters.put("creator._id",new SearchFilter("creator._id", SearchFilter.Operator.EQ, shiroUser.getId()));
+        filters.put("categoryId",new SearchFilter("categoryId", SearchFilter.Operator.EQ, categotyId));
+        return filters;
     }
 }
