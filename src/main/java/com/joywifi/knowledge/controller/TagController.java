@@ -1,11 +1,9 @@
 package com.joywifi.knowledge.controller;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
+import com.google.common.collect.Lists;
+import com.joywifi.knowledge.entity.Tag;
+import com.joywifi.knowledge.service.TagService;
+import com.joywifi.knowledge.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,10 +18,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springside.modules.persistence.SearchFilter;
 import org.springside.modules.web.Servlets;
 
-import com.google.common.collect.Lists;
-import com.joywifi.knowledge.entity.Tag;
-import com.joywifi.knowledge.service.TagService;
-import com.joywifi.knowledge.util.Constants;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("tag")
@@ -67,7 +65,7 @@ public class TagController {
 
     @RequestMapping("add-blog-tags")
     @ResponseBody
-    public List<String> addTags(String term){
+    public List<String> addTags(String term) {
         List<Tag> tags = tagService.findBy("title", SearchFilter.Operator.LIKE, term);
         List<String> tagTitles = Lists.newArrayList();
         for (Tag tag : tags) {
@@ -78,7 +76,7 @@ public class TagController {
 
     @RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
     public String edit(@PathVariable("id") String id, Model model) {
-        Tag tag= tagService.get(id);
+        Tag tag = tagService.get(id);
         model.addAttribute("tag", tag);
 
         return "tag/edit";

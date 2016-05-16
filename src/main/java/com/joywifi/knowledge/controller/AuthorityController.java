@@ -1,11 +1,8 @@
 package com.joywifi.knowledge.controller;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
+import com.joywifi.knowledge.entity.Authority;
+import com.joywifi.knowledge.service.AuthorityService;
+import com.joywifi.knowledge.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,9 +16,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springside.modules.persistence.SearchFilter;
 import org.springside.modules.web.Servlets;
 
-import com.joywifi.knowledge.entity.Authority;
-import com.joywifi.knowledge.service.AuthorityService;
-import com.joywifi.knowledge.util.Constants;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("authority")

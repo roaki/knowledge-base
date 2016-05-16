@@ -18,14 +18,17 @@
 <div class="am-g">
   <div class="am-u-sm-12 am-u-md-10">
     <form class="am-form" action="${ctx}/blog/create" method="post">
+
       <div class="am-form-group">
         <label for="blog-title">标题</label>
         <input type="text" id="blog-title" name="title" required/>
       </div>
+
       <div class="am-form-group">
         <label for="blog-summary">摘要</label>
         <textarea class="" name="summary" rows="4" id="blog-summary"></textarea>
       </div>
+
       <div class="am-form-group">
         <label for="blog-categoryTitle">分类</label>
         <select id="blog-categoryTitle" name="categoryTitle">
@@ -34,10 +37,12 @@
           </c:forEach>
         </select>
       </div>
+
       <div class="am-form-group">
         <label for="blog-tagTitles">标签</label>
         <input type="text" id="blog-tagTitles" name="tagTitles" required/>
       </div>
+
       <div class="am-form-group">
         <label for="blog-content">内容</label>
         <script id="blog-content" name="content" type="text/plain"></script>
@@ -47,6 +52,7 @@
     </form>
   </div>
 </div>
+
 <content tag="script">
   <script type="text/javascript" src="${ctx}/assets/js/ueditor/ueditor.config.js"></script>
   <script type="text/javascript" src="${ctx}/assets/js/ueditor/ueditor.all.min.js"></script>

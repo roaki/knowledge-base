@@ -16,6 +16,7 @@
 
 <div class="am-g">
   <form action="${ctx}/blog/" class="search">
+
     <div class="am-u-sm-12 am-u-md-3">
       <div class="am-btn-toolbar">
         <div class="am-btn-group am-btn-group-xs">
@@ -24,6 +25,7 @@
         </div>
       </div>
     </div>
+
     <div class="am-u-sm-12 am-u-md-3">
       <div class="am-input-group am-input-group-sm">
         <input type="text" name="criteria_LIKE_ip" value="${param.criteria_LIKE_ip}"
@@ -33,6 +35,7 @@
             </span>
       </div>
     </div>
+
   </form>
 </div>
 
@@ -50,6 +53,7 @@
           <th class="table-set">操作</th>
         </tr>
         </thead>
+
         <tbody>
         <c:forEach items="${blogs.content}" var="blog" varStatus="status">
           <tr>

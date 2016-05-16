@@ -45,12 +45,12 @@
       </shiro:hasPermission>
       <shiro:hasPermission name="blog:list">
         <li class="${menu=='blog'?'am-active':''}"><a href="${ctx}/blog/"><span class="am-icon-table"></span>
-        文章</a>
+          文章</a>
         </li>
       </shiro:hasPermission>
       <shiro:hasPermission name="collect:list">
         <li class="${menu=='collect'?'am-active':''}"><a href="${ctx}/collect/"><span class="am-icon-table"></span>
-       我的收藏</a>
+          我的收藏</a>
         </li>
       </shiro:hasPermission>
       <li><a href="${ctx}/logout"><span class="am-icon-sign-out"></span> 退出</a></li>

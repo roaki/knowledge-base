@@ -1,7 +1,6 @@
 package com.joywifi.knowledge.controller;
 
 import com.joywifi.knowledge.security.FormAuthenticationCaptchaFilter;
-
 import com.joywifi.knowledge.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;

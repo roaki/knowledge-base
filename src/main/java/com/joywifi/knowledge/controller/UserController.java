@@ -1,12 +1,13 @@
 package com.joywifi.knowledge.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
+import com.google.common.collect.Lists;
+import com.joywifi.knowledge.annotation.CheckToken;
+import com.joywifi.knowledge.annotation.CurrentUserQuery;
+import com.joywifi.knowledge.entity.Role;
+import com.joywifi.knowledge.entity.User;
+import com.joywifi.knowledge.service.RoleService;
+import com.joywifi.knowledge.service.UserService;
+import com.joywifi.knowledge.util.Constants;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +24,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springside.modules.persistence.SearchFilter;
 import org.springside.modules.web.Servlets;
 
-import com.google.common.collect.Lists;
-import com.joywifi.knowledge.annotation.CheckToken;
-import com.joywifi.knowledge.annotation.CurrentUserQuery;
-import com.joywifi.knowledge.entity.Role;
-import com.joywifi.knowledge.entity.User;
-import com.joywifi.knowledge.service.RoleService;
-import com.joywifi.knowledge.service.UserService;
-import com.joywifi.knowledge.util.Constants;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @Validated
 @Controller

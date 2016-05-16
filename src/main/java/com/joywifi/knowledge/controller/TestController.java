@@ -14,7 +14,7 @@ public class TestController {
 
     @RequestMapping
     @ResponseBody
-    public String test(String stamp){
+    public String test(String stamp) {
         logger.info(stamp);
         return stamp;
     }

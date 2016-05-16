@@ -1,11 +1,11 @@
 package com.joywifi.knowledge.controller;
 
-import java.io.Serializable;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
+import com.joywifi.knowledge.entity.BaseEntity;
+import com.joywifi.knowledge.model.AjaxResponse;
+import com.joywifi.knowledge.model.ErrorResponse;
+import com.joywifi.knowledge.model.SuccessResponse;
+import com.joywifi.knowledge.service.BaseService;
+import com.joywifi.knowledge.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,12 +14,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springside.modules.persistence.SearchFilter;
 import org.springside.modules.web.Servlets;
 
-import com.joywifi.knowledge.entity.BaseEntity;
-import com.joywifi.knowledge.model.AjaxResponse;
-import com.joywifi.knowledge.model.ErrorResponse;
-import com.joywifi.knowledge.model.SuccessResponse;
-import com.joywifi.knowledge.service.BaseService;
-import com.joywifi.knowledge.util.Constants;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.io.Serializable;
+import java.util.Map;
 
 public class BaseRestController<M extends BaseEntity, ID extends Serializable> {
 

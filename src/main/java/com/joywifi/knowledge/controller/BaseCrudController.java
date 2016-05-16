@@ -1,11 +1,9 @@
 package com.joywifi.knowledge.controller;
 
-import java.io.Serializable;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
+import com.joywifi.knowledge.annotation.CheckToken;
+import com.joywifi.knowledge.entity.BaseEntity;
+import com.joywifi.knowledge.service.BaseService;
+import com.joywifi.knowledge.util.Constants;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,10 +18,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springside.modules.persistence.SearchFilter;
 import org.springside.modules.web.Servlets;
 
-import com.joywifi.knowledge.annotation.CheckToken;
-import com.joywifi.knowledge.entity.BaseEntity;
-import com.joywifi.knowledge.service.BaseService;
-import com.joywifi.knowledge.util.Constants;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.io.Serializable;
+import java.util.Map;
 
 public class BaseCrudController<M extends BaseEntity, ID extends Serializable> extends BaseController<M> {
 

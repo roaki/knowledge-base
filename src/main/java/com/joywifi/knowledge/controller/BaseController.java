@@ -1,5 +1,6 @@
 package com.joywifi.knowledge.controller;
 
+import com.joywifi.knowledge.entity.BaseEntity;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.ui.Model;
 import org.springframework.util.Assert;
@@ -7,8 +8,6 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springside.modules.utils.Reflections;
-
-import com.joywifi.knowledge.entity.BaseEntity;
 
 public class BaseController<M extends BaseEntity> {
 

@@ -41,6 +41,7 @@
           <th class="table-set">操作</th>
         </tr>
         </thead>
+
         <tbody>
         <c:forEach items="${categories.content}" var="category" varStatus="status">
           <tr>
